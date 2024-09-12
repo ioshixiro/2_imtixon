@@ -1,0 +1,99 @@
+@import "./styles";
+
+header {
+    width: 100vw;
+    height: 85px;
+    padding-top: 5px;
+    background-color: rgba(153, 153, 153, 0.45);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 100;
+
+    .header {
+        width: 90%;
+        height: 80px;
+        @include flex(space-between);
+
+        #header_main_img {
+            height: 100%;
+        }
+
+        ul {
+            @include flex;
+            gap: 20px;
+
+            li a {
+                font-family: $font-family;
+                font-weight: 600;
+                font-size: 20px;
+                color: #363738;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $medium-gray;
+                }
+            }
+        }
+
+        label {
+            display: none;
+            width: 50px;
+            border: 1px solid black;
+            cursor: pointer;
+
+            img{
+                width: 45px;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 885px) {
+    header {
+        .header {
+            label {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                top: 85px;
+                left: -100%;
+                background-color: rgba(170, 170, 170, 0.45);
+                backdrop-filter: blur(5px);
+                height: 100vh;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                transition: 0.4s;
+
+                li a button {
+                    display: block;
+                }
+            }
+
+            button {
+                display: none;
+            }
+
+            #header_navbar:checked ~ ul {
+                left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .header {
+        #header_main_img {
+            width: 80%;
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+@import "./styles";
+
+.our_partners {
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(space-between, baseline, column);
+    gap: 90px;
+    margin-top: 100px;
+
+    h1{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 48px;
+        color: #363738;
+    }
+
+    .our_partners_list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: space-evenly;
+        gap: 80px;
+
+        .our_partners_thePartner {
+            height: 180px;
+            @include flex(space-between, center, column);
+
+            h4{
+                font-family: $font-family;
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center;
+                color: #363738;
+            }
+
+            p{
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 14px;
+                text-align: center;
+                color: #6b6b6c;
+            }
+        }
+    }
+}

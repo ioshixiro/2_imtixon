@@ -1,0 +1,50 @@
+@import "./styles";
+
+.acquired_clients {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 500px;
+    @include flex(space-between, baseline);
+    background-color: $teal-green;
+    padding: 85px 66px;
+    border-radius: 8px;
+
+    h1{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        color: #fff;
+    }
+
+    .acquired_clients_info {
+        width: 650px;
+        padding-inline: 40px;
+        background-color: #fff;
+        @include flex(space-between, center, column);
+        
+        .acquired_clients_info_header {
+            @include flex(space-between, center);
+            height: 122px;
+            gap: 195px;
+            border-bottom: 1px solid #d7d7dd;
+
+            img{
+                width: 100px;
+            }
+
+            p{
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 11px;
+                color: #6b6b6c;
+            }
+        }
+        .acquired_clients_sales {
+            width: 100%;
+            @include flex(center, center, column);
+
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.delivery_types {
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(space-around);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 35px;
+    padding-block: 40px;
+    border-radius: 20px;
+
+    .delivery_type {
+        width: 230px;
+        height: 245px;
+        @include flex(space-between, baseline, column);
+        // border-inline: 1px solid black;
+
+        img{
+            width: 92px;
+        }
+
+        h4{
+            font-family: $font-family;
+            font-weight: 600;
+            font-size: 20px;
+            color: #363738;
+        }
+
+        h5{
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 16px;
+            color: #6b6b6c;
+        }
+    }
+}
+
+@media (max-width: 885px) {
+    .delivery_types {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

@@ -1,0 +1,61 @@
+@import "./styles";
+
+.company_stuff {
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(center, baseline, column);
+    gap: 90px;
+    margin-top: 100px;
+
+    .company_stuff_list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 50px;
+            
+        .company_stuff_person {
+            @include flex(left);
+            height: 210px;
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            border-left: 70px solid $teal-green;
+            padding-inline: 40px;
+            gap: 40px;
+
+            img{
+                width: 140px;
+            }
+
+            ul{
+                max-width: 170px;
+                height: 140px;
+                @include flex(space-between, center, column);
+
+                li{
+                    h3{
+                        font-family: $font-family;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: #363738;
+                    }
+                    p{
+                        font-family: $second-family;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #6b6b6c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .company_stuff_person {
+        width: 84vw;
+        height: auto !important;
+        padding: 40px;
+        flex-direction: column !important;
+        border-left: 40px solid $teal-green !important;
+    }
+}

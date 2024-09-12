@@ -1,0 +1,64 @@
+@import "./styles";
+
+.far_east {
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 150px;
+    @include flex(space-between);
+    gap: 40px;
+
+    img{
+        max-width: 635px;
+        cursor: pointer;
+    }
+
+    h1{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 52px;
+        color: #363738;
+    }
+
+    h3{
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 16px;
+        color: #6b6b6c;
+        margin-block: 35px;
+    }
+
+    span{
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 16px;
+        color: #363738;
+
+        &:hover {
+            border-bottom: 3px solid #ffce50;
+        }
+    }
+
+}
+
+@media (max-width: 1256px) {
+    .far_east {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 705px) {
+    .far_east {
+        img{
+            width: 90vw;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .far_east {
+        h1{
+            font-size: 14.45vw;
+        }
+    }
+}

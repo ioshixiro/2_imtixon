@@ -1,0 +1,105 @@
+@import "./styles";
+
+.our_contacts {
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(center, baseline, column);
+    gap: 90px;
+    margin-top: 100px;
+
+    h1{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 48px;
+        color: #363738;
+    }
+
+    .our_contacts_info {
+        width: 100%;
+        @include flex(space-between);
+    
+        .our_contacts_info_call {
+            gap: 40px;
+            @include flex;
+            align-items: baseline;
+            flex-direction: column;
+            
+    
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 35px;
+    
+                img {
+                    width: 23px;
+                }
+    
+                p {
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #363738;
+                }
+    
+                span {
+                    font-weight: normal;
+                    color: #6b6b6c;
+                }
+            }
+        }
+        .our_contacts_info_write {
+            height: auto;
+            gap: 25px;
+            width: 800px;
+            background: #f9f9fb;
+            padding: 40px;
+            @include flex(space-between, baseline, column);
+
+            li{
+                width: 100%;
+                @include flex;
+                justify-content: space-between !important;
+
+                p{
+                    font-family: $second-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #6b6b6c;
+                }
+                h4{
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #363738;
+                    max-width: 444px;
+                }
+            }
+        }
+    }   
+}
+
+@media (max-width: 1170px) {
+    .our_contacts_info {
+        flex-direction: column !important;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 875px) {
+    .our_contacts_info_write {
+        width: 90vw !important;
+    }
+}
+
+@media (max-width: 660px) {
+    .our_contacts_info_write{
+        gap: 25px;
+
+        li {
+            flex-direction: column !important;
+            align-items: baseline !important;
+        }
+    }
+}

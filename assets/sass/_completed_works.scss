@@ -1,0 +1,88 @@
+@import "./styles";
+
+.completed_works {
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(center, baseline, column);
+    margin-top: 120px;
+
+    h1{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 48px;
+        color: #363738;
+        text-align: center;
+    }
+
+    p{
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 16px;
+        color: #6b6b6c;
+        margin-block: 40px;
+        text-align: center;
+    }
+
+    .completed_work_holder {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 395px);
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .completed_work {
+        width: 395px;
+        height: 440px;
+        @include flex(space-between, baseline, column);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+
+        img{
+            width: 100%;
+        }
+
+        ul{
+            @include flex(center, baseline, column);
+            padding: 36px;
+
+            li{
+                h3{
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #363738;
+                }
+                h5{
+                    margin: 16px 0px 32px;
+                    font-family: $second-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #6b6b6c;
+                }
+                span{
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #363738;
+
+                    &:hover {
+                        border-bottom: 3px solid #ffce50;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .completed_work {
+        width: 90vw !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .completed_works h1{
+        font-size: 12.8vw;
+    }
+}

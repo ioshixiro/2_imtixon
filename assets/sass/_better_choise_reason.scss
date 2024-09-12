@@ -1,0 +1,52 @@
+@import "./styles";
+
+.better_choise_reasons {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 480px);
+    justify-content: space-around;
+    gap: 40px;
+
+    .better_choise_reason {
+        border: 1px solid black;  
+        @include flex(space-between); 
+        gap: 40px;
+        justify-content: baseline;
+
+        img{
+            width: 80px;
+        }
+
+        ul{
+            height: 100%;
+            width: 65%;
+            @include flex(space-between, baseline, column);
+
+            li a{
+                h2{
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #363738;
+                }
+
+                h3{
+                    font-family: $second-family;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #6b6b6c;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .better_choise_reason {
+        width: 90vw;
+        gap: 0;
+        justify-content: space-between;
+    }
+}

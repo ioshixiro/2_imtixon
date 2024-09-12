@@ -1,0 +1,41 @@
+@import "./styles";
+
+.better_choise {
+    width: 90vw;
+    height: 475px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 65px;
+    overflow-x: hidden;
+
+    img {
+        height: 473px;
+        width: auto;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        max-width: 362px;
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 48px;
+        position: absolute;
+        top: 50%;
+        left: 26%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: #fff;    
+    }
+}
+
+@media (max-width: 768px) {
+    .better_choise h1{
+        width: 90vw;
+        text-align: center !important;
+        left: 50%;
+    }
+}

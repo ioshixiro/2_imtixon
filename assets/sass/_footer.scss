@@ -1,0 +1,58 @@
+@import "./styles";
+
+footer {
+    width: 100vw;
+    background: #0b7572;
+    padding: 50px 5vw;
+    gap: 25px ;
+
+    ul {
+        @include flex(space-between, baseline);
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-direction: column;
+            gap: 25px;
+
+            h1 {
+                font-family: $third-family;
+                font-weight: 500;
+                font-size: 60px;
+                color: #fff;
+            }
+
+            p {
+                font-family: $font-family;
+                font-weight: 500;
+                font-size: 13px;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 8px;
+            }
+            
+            img{
+                width: 70px;
+            }
+            
+            button {
+                width: 271px;
+                background-color: $mustard-yellow;
+                height: 42px;
+                border: 1px solid $mustard-yellow;
+                color: white;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 905px) {
+    ul{
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+}
+
